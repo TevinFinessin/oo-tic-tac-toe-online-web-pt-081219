@@ -29,17 +29,15 @@ class TicTacToe
     @board[index] = value
   end
   
-  # Helper Method
   def position_taken?(index)
      !(@board[index] == " ")
   end
   
-  #valid_move?
+  
   def valid_move?(index)
-    #if move is valid
     if position_taken?(index) == false && index.between?(0,8) == true
       return true
-    #if move is invalid
+    
     elsif position_taken?(index) == true
       return false
     elsif index.between?(0, 8) == false 
